@@ -4,14 +4,14 @@ services:
   app:
     build: proj
     volumes:
-      - ./data:/app42/App42/target/ 
+      - /data:/app42/App42/target/ 
 
   prod:      
     image: tomcat:9.0
     ports:
       - "8080:8080"
     volumes:
-      - ./data:/usr/local/tomcat/webapps/
+      - /data:/usr/local/tomcat/webapps/
     depends_on:
       - app
       - bd
@@ -22,5 +22,5 @@ services:
       - MYSQL_ROOT_PASSWORD=jc31d2qyy7h9jv5jn1u9uosjksxzaizw
     ports:
       - "3306:8514"  
-    volumes:
-      - ./mysql:/app42/App42/src/shephertz/app42/paas/sample
+    # volumes:
+    #   - ./mysql:/app42/App42/src/shephertz/app42/paas/sample
