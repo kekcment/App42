@@ -4,20 +4,20 @@ services:
   app:
     build: proj
     volumes:
-      - /data:/tmp/App42/target/ 
+      - ./data:/tmp/App42/target/ 
 
   prod:      
     image: tomcat:9.0
     ports:
       - "8081:8080"
     volumes:
-      - /data:/usr/local/tomcat/webapps/
+      - ./data:/usr/local/tomcat/webapps/
     depends_on:
       - app
       - bd
 
   bd:
-    image: mariadb:10.1
+    image: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=secret
       # - MYSQL_DATABASE=bd
@@ -28,6 +28,3 @@ services:
     volumes:
       # - ./mysql:/app42/App42/src/shephertz/app42/paas/sample
       - ./mysql:/var/lib/mysql
-
-# volumes:
-#  data:
