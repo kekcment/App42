@@ -14,8 +14,9 @@ services:
       - /data:/usr/local/tomcat/webapps/
     depends_on:
       - app
+      - bd
 
-  db:
+  bd:
     image: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=1423
