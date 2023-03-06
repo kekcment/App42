@@ -4,7 +4,9 @@ services:
   app:
     build: proj
     volumes:
-      - data:/app42/App42/target/ 
+      - type: volume
+        source: artifacts
+        target: /app42/App42/target/
 
   prod:      
     image: tomcat:9.0
@@ -12,7 +14,9 @@ services:
     ports:
       - "8081:8080"
     volumes:
-      - data:/usr/local/tomcat/webapps/
+      - type: volume
+        source: artifacts
+        target: /usr/local/tomcat/webapps/
     depends_on:
       - app
       - bd
@@ -25,3 +29,6 @@ services:
       - "3306:8514"  
     volumes:
       - ./mysql:/app42/App42/src/shephertz/app42/paas/sample
+
+volumes:
+  artifacts:
