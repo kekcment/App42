@@ -2,7 +2,7 @@
 version: '3.7'
 services:
   app:
-    build: build
+    build: proj
     volumes:
       - /data:/app42/App42/target/ 
 
