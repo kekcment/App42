@@ -4,7 +4,7 @@ services:
   app:
     build: proj
     volumes:
-      - /data:/app42/App42/target/ 
+      - /data:/tmp/App42/target/ 
 
   prod:      
     image: tomcat:9.0
