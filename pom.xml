@@ -47,7 +47,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring</artifactId>
-			<version>5.3.25</version>
+			<version>4.0.0.RELEAS</version>
 		</dependency>
 
 		<!-- Logging -->
