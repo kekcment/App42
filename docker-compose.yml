@@ -4,7 +4,7 @@ services:
   app:
     build: proj
     volumes:
-      - /data:/app42/App42/target/ 
+      - /app42/App42/target/ 
 
   prod:      
     image: tomcat:9.0
@@ -12,7 +12,7 @@ services:
     ports:
       - "8081:8080"
     volumes:
-      - /data:/usr/local/tomcat/webapps/
+      - /usr/local/tomcat/webapps/
 #    command: bash -c "/usr/local/tomcat/bin/catalina.sh run"  
     depends_on:
       - app
