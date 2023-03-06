@@ -23,4 +23,4 @@ services:
     ports:
       - "3306:8514"  
     volumes:
-      - /mysql:/var/lib/mysql    
+      - /mysql:/app42/App42/src/shephertz/app42/paas/sample
