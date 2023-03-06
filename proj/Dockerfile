@@ -1,5 +1,5 @@
 #FROM tomcat:9.0
-FROM maven:3.3-jdk-8
+FROM maven:3.9
 # RUN apt update
 RUN apt install git -y
 WORKDIR /tmp/
