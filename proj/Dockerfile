@@ -4,5 +4,5 @@ FROM maven:3.3-jdk-8
 RUN apt install git -y
 WORKDIR /tmp/
 RUN git clone https://github.com/kekcment/App42.git
-WORKDIR  /tmp/App42
+WORKDIR  /tmp/App42/
 RUN mvn package
