@@ -1,7 +1,7 @@
 ---
 version: '3.7'
 services:
-  build:
+  app:
     build: build
     volumes:
       - /data:/app42/App42/target/ 
@@ -13,7 +13,7 @@ services:
     volumes:
       - /data:/usr/local/tomcat/webapps/
     depends_on:
-      - build
+      - app
 
   db:
     image: mysql
