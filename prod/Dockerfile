@@ -1,6 +1,5 @@
 # FROM maven:3.3-jdk-8
-FROM tomcat:9.0
+FROM maven:3.3-jdk-8
 # RUN apt install default-jdk maven -y
 # ADD ./App42/target /usr/local/tomcat/webapps/
-RUN mvn clean
-RUN mvn install -y
+RUN apt install tomcat:9.0
