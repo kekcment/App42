@@ -7,7 +7,7 @@ services:
       - /data:/app42/App42/target/ 
 
   prod:      
-    build: prod
+    image: tomcat:9.0
     ports:
       - "8080:8080"
     volumes:
