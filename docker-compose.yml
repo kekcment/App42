@@ -23,8 +23,5 @@ services:
       - MYSQL_ROOT_PASSWORD=jc31d2qyy7h9jv5jn1u9uosjksxzaizw
     ports:
       - "3306:8514"  
-    volumes:
-      - ./mysql:/app42/App42/src/shephertz/app42/paas/sample
-
-volumes:
- data:
+    # volumes:
+    #   - ./mysql:/app42/App42/src/shephertz/app42/paas/sample
