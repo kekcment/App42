@@ -14,7 +14,7 @@ services:
       - /data:/usr/local/tomcat/webapps/
     depends_on:
       - app
-      - bd
+      # - bd
 
   # bd:
   #   image: mysql
