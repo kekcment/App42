@@ -25,3 +25,6 @@ services:
       - "3306:8514"  
     volumes:
       - ./mysql:/app42/App42/src/shephertz/app42/paas/sample
+
+volumes:
+ data:
