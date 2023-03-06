@@ -4,7 +4,7 @@ services:
   build:
     build: build
     volumes:
-      - /data:/tmp/calculator-servlet-example/target/ 
+      - /data:/app42/App42/target/ 
 
   prod:      
     build: prod
@@ -14,3 +14,12 @@ services:
       - /data:/usr/local/tomcat/webapps/
     depends_on:
       - build
+
+  db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=1423
+    ports:
+      - "8001:8514"  
+    volumes:
+      - ./mysql:/var/lib/mysql    

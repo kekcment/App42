@@ -1,2 +1,3 @@
-FROM tomcat:9.0.72-jre11
-ADD ./target/mycalcwebapp.war /usr/local/tomcat/webapps/
+# FROM maven:3.3-jdk-8
+FROM tomcat:9.0
+# ADD ./App42/target /usr/local/tomcat/webapps/
