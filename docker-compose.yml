@@ -7,7 +7,8 @@ services:
       - /data:/app42/App42/target/ 
 
   prod:      
-    image: tomcat:9.0
+    # image: tomcat:9.0
+    build: prod
     ports:
       - "8080:8080"
     volumes:
@@ -18,9 +19,9 @@ services:
 
   bd:
     image: mysql
-    # environment:
-    #   - MYSQL_ROOT_PASSWORD=jc31d2qyy7h9jv5jn1u9uosjksxzaizw
+    environment:
+      - MYSQL_ROOT_PASSWORD=jc31d2qyy7h9jv5jn1u9uosjksxzaizw
     ports:
       - "3306:8514"  
-    # volumes:
-    #   - ./mysql:/app42/App42/src/shephertz/app42/paas/sample
+    volumes:
+      - ./mysql:/app42/App42/src/shephertz/app42/paas/sample
