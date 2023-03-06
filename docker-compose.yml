@@ -19,7 +19,7 @@ services:
   bd:
     image: mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_ROOT_PASSWORD=jc31d2qyy7h9jv5jn1u9uosjksxzaizw
     ports:
       - "8001:8514"  
     volumes:
