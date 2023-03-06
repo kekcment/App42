@@ -13,13 +13,13 @@ services:
       - "8081:8080"
     volumes:
       - /data:/usr/local/tomcat/webapps/
-    command: bash -c "/usr/local/tomcat/bin/catalina.sh run"  
+#    command: bash -c "/usr/local/tomcat/bin/catalina.sh run"  
     depends_on:
       - app
       - bd
 
   bd:
-    image: mysql
+    image: mariadb:10.1
     environment:
       - MYSQL_ROOT_PASSWORD=secret
       - MYSQL_DATABASE=bd
