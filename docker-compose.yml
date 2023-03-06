@@ -1,16 +1,16 @@
 ---
 version: '3.7'
 services:
-  cal:
-    build: prog
+  build:
+    build: build
     volumes:
       - /data:/tmp/calculator-servlet-example/target/ 
 
-  alp:      
-    build: alp
+  prod:      
+    build: prod
     ports:
       - "8080:8080"
     volumes:
       - /data:/usr/local/tomcat/webapps/
     depends_on:
-      - cal
+      - build
