@@ -7,7 +7,7 @@ services:
       - /data:/app42/App42/target/ 
 
   prod:      
-    build: prod
+    image: tomcat:9.0
     ports:
       - "8080:8080"
     volumes:
@@ -19,7 +19,7 @@ services:
   bd:
     image: mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=1423
+      - MYSQL_ROOT_PASSWORD=secret
     ports:
       - "8001:8514"  
     volumes:
